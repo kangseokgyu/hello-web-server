@@ -8,7 +8,7 @@ use std::{
 
 fn main() {
     let listener = TcpListener::bind("localhost:8080").unwrap();
-    let pool = ThreadPool::new(4);
+    let pool = ThreadPool::new(2);
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
